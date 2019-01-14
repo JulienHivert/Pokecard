@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RLMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pokemon_gardent">
+
+    <RelativeLayout
+        android:id="@+id/RLContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgPokemon"
+            android:layout_width="192dp"
+            android:layout_height="192dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/TVNamePokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgPokemon"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/LineBreak"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/TVNamePokemon"
+            android:layout_margin="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/RLStats1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/LineBreak">
+
+
+            <TextView
+                android:id="@+id/LabelType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Type :" />
+
+            <TextView
+                android:id="@+id/TVType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/LabelType"/>
+
+            <TextView
+                android:id="@+id/LabelWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LabelType"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Poids :" />
+
+            <TextView
+                android:id="@+id/TVWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LabelType"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/LabelWeight"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLStats2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/LineBreak2"
+            android:layout_below="@+id/LineBreak">
+
+            <TextView
+                android:id="@+id/LabelHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="HP :" />
+
+            <TextView
+                android:id="@+id/TVHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/LabelHP"/>
+
+            <TextView
+                android:id="@+id/LabelHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelHP"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Hauteur :" />
+
+            <TextView
+                android:id="@+id/TVHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelHP"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/LabelHeight"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/LineBreak2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/RLStats1"
+            android:layout_margin="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/RLStats3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/LineBreak2"
+            android:layout_alignTop="@+id/LineBreak2">
+
+            <TextView
+                android:id="@+id/LabelSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Vitesse :" />
+
+            <TextView
+                android:id="@+id/TVSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/LabelSpeed"/>
+
+            <TextView
+                android:id="@+id/LabelAttack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelSpeed"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Attaque :" />
+
+            <TextView
+                android:id="@+id/TVAttack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelSpeed"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/LabelAttack"/>
+
+            <TextView
+                android:id="@+id/LabelDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelAttack"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Défense :" />
+
+            <TextView
+                android:id="@+id/TVDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelAttack"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/LabelDefense"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLStats4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/LineBreak2"
+            android:layout_below="@+id/LineBreak2">
+
+            <TextView
+                android:id="@+id/LabelSpeDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Défense spéciale :" />
+
+            <TextView
+                android:id="@+id/TVSpeDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/LabelSpeDefense"/>
+
+            <TextView
+                android:id="@+id/LabelSpeAttack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelSpeDefense"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Attaque spéciale :" />
+
+            <TextView
+                android:id="@+id/TVSpeAttack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LabelSpeDefense"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/LabelSpeAttack"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:progressDrawable="@drawable/circular_progress" />
+
+</RelativeLayout>

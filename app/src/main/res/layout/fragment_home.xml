@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RLMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pokemon_gardent"
+    tools:context="com.example.iem.test.BottomNavigation.HomeFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/RLContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/RLTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/TVUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Utilisateur"
+                android:textSize="20dp" />
+
+            <RelativeLayout
+                android:id="@+id/TopContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                <TextView
+                    android:id="@+id/LabelID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgProfile"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/imgProfile"
+                    android:text="ID : " />
+
+                <TextView
+                    android:id="@+id/TVID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/LabelID"
+                    android:layout_alignBottom="@+id/LabelID"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/LabelID"
+                    android:text="IDTEST123456789" />
+
+                <TextView
+                    android:id="@+id/labelNbCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TVID"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/imgProfile"
+                    android:text="Nombre de cartes : " />
+
+                <TextView
+                    android:id="@+id/TVNbCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/labelNbCard"
+                    android:layout_alignBottom="@+id/labelNbCard"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/labelNbCard"
+                    android:text="99" />
+
+                <TextView
+                    android:id="@+id/LabelDateInscription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/labelNbCard"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/imgProfile"
+                    android:text="Date d'inscription : " />
+
+                <TextView
+                    android:id="@+id/TVDateInscription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/LabelDateInscription"
+                    android:layout_alignBottom="@+id/LabelDateInscription"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/LabelDateInscription"
+                    android:text="01/01/18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imgProfile"
+                    android:layout_margin="20dp"
+                    android:background="@color/colorAccent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RLBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/RLTop">
+
+            <RelativeLayout
+                android:id="@+id/RLLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/LineBreak2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/TVLastCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Dernière carte obtenue" />
+
+                <ImageView
+                    android:id="@+id/imgLastPokemon"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_below="@+id/TVLastCard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="onLastPokemon"/>
+
+                <TextView
+                    android:id="@+id/TVNameLastPokemon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgLastPokemon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textAllCaps="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/LineBreak2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorAccent" />
+
+            <RelativeLayout
+                android:id="@+id/RLRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/RLLeft"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/RLLeft">
+
+                <TextView
+                    android:id="@+id/TVRandomCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Carte journalière" />
+
+                <TextView
+                    android:id="@+id/TVTimerRandom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/TVRandomCard"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Temps :" />
+
+                <TextView
+                    android:id="@+id/TimerRandom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/TVTimerRandom"
+                    android:layout_alignBottom="@+id/TVTimerRandom"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/TVTimerRandom"
+                    android:text="TIME" />
+
+                <Button
+                    android:id="@+id/BtnClaim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:enabled="false"
+                    android:text="Réclamer" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:progressDrawable="@drawable/circular_progress" />
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RLContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pokemon_gardent">
+
+    <RelativeLayout
+        android:id="@+id/TopContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/TVPseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgProfile"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pseudo"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/RLUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/TVPseudo"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/LabelID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/id" />
+
+            <TextView
+                android:id="@+id/TVID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/LabelID"
+                android:layout_alignBottom="@+id/LabelID"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/LabelID"
+                android:text="IDTEST123456789" />
+
+            <TextView
+                android:id="@+id/labelNbCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TVID"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/nbCards" />
+
+            <TextView
+                android:id="@+id/TVNbCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/labelNbCard"
+                android:layout_alignBottom="@+id/labelNbCard"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/labelNbCard"
+                android:text="99" />
+
+            <TextView
+                android:id="@+id/LabelDateInscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelNbCard"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/date_d_inscription" />
+
+            <TextView
+                android:id="@+id/TVDateInscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/LabelDateInscription"
+                android:layout_alignBottom="@+id/LabelDateInscription"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/LabelDateInscription"
+                android:text="01/01/18" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineBreak"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/TopContent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:layout_margin="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/RLPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineBreak"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_OldPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/ETOldPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/updatePass"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_NewPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_OldPass"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/ETNewPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/BtnValidate"
+            android:text="@string/validate"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_NewPass"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"/>
+    </RelativeLayout>
+</RelativeLayout>

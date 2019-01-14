@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5DC784</color>
+    <color name="colorPrimaryDark">#5DC784</color>
+    <color name="colorAccent">#FDB449</color>
+    <color name="disconnectRed">#0041cc</color>
+
+    <!-- Color Type -->
+    <color name="typeNormal">#BABAA9</color>
+    <color name="typeFighting">#BA5544</color>
+    <color name="typeFlying">#6699FF</color>
+    <color name="typePoison">#AA5599</color>
+    <color name="typeGround">#DDBB55</color>
+    <color name="typeRock">#BBAA66</color>
+    <color name="typeBug">#C3D453</color>
+    <color name="typeGhost">#6565BA</color>
+    <color name="typeSteel">#AAAABB</color>
+    <color name="typeFire">#FF4422</color>
+    <color name="typeWater">#3392F8</color>
+    <color name="typeGrass">#77CC55</color>
+    <color name="typeElectric">#FFCD35</color>
+    <color name="typePsychic">#FF5599</color>
+    <color name="typeIce">#77DDFF</color>
+    <color name="typeDragon">#6F5EDE</color>
+    <color name="typeDark">#685443</color>
+    <color name="typeFairy">#FFAAFF</color>
+</resources>
